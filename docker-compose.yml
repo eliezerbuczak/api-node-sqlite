@@ -1,0 +1,13 @@
+version: '3.0'
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./sqlite_data_dump.sql:/docker-entrypoint-initdb.d/dump.sql
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - "${MYSQL_PORT}:3306"
