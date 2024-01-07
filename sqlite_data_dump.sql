@@ -1,3 +1,0 @@
-CREATE TABLE usuarios (id INT PRIMARY KEY AUTO_INCREMENT, nome VARCHAR(255));
-INSERT INTO usuarios VALUES(1,'João');
-INSERT INTO usuarios VALUES(2,'Pedro');
